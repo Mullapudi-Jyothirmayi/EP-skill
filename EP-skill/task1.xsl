@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 	<xsl:template match="/Students">
 		 <html>
 		  <body>
 		  <h1 align = 'center'>Students Data</h1>
-		    <table border="1">
+		    <table border="1" align="center">
 		      <tr>
-		        <th  bgcolor="blue">Number</th>
-		        <th  bgcolor="yellow">Name</th>
-		        <th  bgcolor="green">Email</th>
-		        <th  bgcolor="red">Marks</th>
-		        <th  bgcolor="pink">Class</th>
+		        <th  bgcolor="yellow">Number</th>
+		        <th  bgcolor="pink">Name</th>
+		        <th  bgcolor="lightblue">Email</th>
+		        <th  bgcolor="lightgreen">Marks</th>
+		        <th  bgcolor="orange">Class</th>
 		      </tr>
 		      <xsl:for-each select="student">
 		      <tr>
