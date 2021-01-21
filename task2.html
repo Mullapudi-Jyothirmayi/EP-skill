@@ -1,0 +1,94 @@
+<html>
+<title>Example-1</title>
+<head>
+<script> 
+function validateform()
+{ 
+var name=document.f1.name.value; 
+var number=document.f1.number.value; 
+var email=document.f1.email.value; 
+var address=document.f1.address.value; 
+var gender=document.f1.gender.value; 
+var at=email.indexOf('@');
+var dot=email.indexOf('.');
+ 
+if (name==null || name=="")
+{ 
+ alert("Name can't be blank"); 
+ return false; 
+}
+if (number==null || number=="")
+{ 
+ alert("Registered number can't be blank"); 
+ return false; 
+}
+if (email==null || email=="")
+{ 
+ alert("Email ID can't be blank"); 
+ return false; 
+}
+if (address==null || address=="")
+{ 
+ alert("Address can't be blank"); 
+ return false; 
+}
+if (gender==null || gender=="")
+{ 
+ alert("Gender must be selected"); 
+ return false; 
+}
+if (number<=190030000 || number >=190032999)
+{ 
+ alert("Registered number is incorrect"); 
+ return false; 
+}
+if((dot - at)>5 && email[dot+3]!=null)
+{
+ alert("Welcome"+" "+name);
+ return false; 
+}
+else
+{
+alert("Invalid email");
+return false; 
+}
+}
+</script>
+</head>
+
+<body>
+
+<form name="f1" method="post" action="abc.jsp" onsubmit="return validateform()" > 
+<p class="solid">
+<table align="center">
+<br><br>
+
+<tr><td>Name of the student :</td><td><input type="text" name="name"><br></td></tr>
+<tr></tr><tr></tr>
+
+<tr><td>Registered number :</td><td><input type="number" name="number"><br></td></tr>
+<tr></tr><tr></tr>
+
+<tr><td>Email id :</td><td><input type="text" name="email"><br></td></tr>
+<tr></tr><tr></tr>
+
+
+<tr><td>Gender :</td><td>
+<input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+<tr></tr><tr></tr>
+
+<tr><td>Address :</td><td>
+<textarea id="address" name="address" color="gray" rows="7" cols="40"></textarea><br></td></tr>
+<tr></tr><tr></tr>
+
+<tr><td><button class="button"><span>Register </span></button></td></tr>
+
+</table>
+</p>
+</form>
+
+</body>
+</html>
